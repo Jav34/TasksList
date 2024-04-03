@@ -1,0 +1,13 @@
+@startuml
+User -> Frontend: Logowanie / Rejestracja
+Frontend -> Backend: Wysłanie żądania logowania / rejestracji
+Backend -> Backend: Weryfikacja danych, generowanie tokenu JWT
+Backend -> Frontend: Zwrócenie tokenu JWT
+User -> Frontend: Wyświetlenie interfejsu użytkownika
+Frontend -> Backend: Wysłanie żądania pobrania danych
+Backend -> Database: Zapytanie o dane
+Database --> Backend: Dane
+Backend --> Frontend: Dane
+@enduml
+
+
