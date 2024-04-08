@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-7f7z67(#egv9kpl=i&%gqe5!2jj9k)=6#@7c0526n&7x^9o%bj'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -62,7 +62,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'src/tasksList/accounts/templates/registration/')],
+        'DIRS': [os.path.join(BASE_DIR, 'src/tasksList/accounts/templates/registration/register.html')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

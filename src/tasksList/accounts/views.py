@@ -24,4 +24,4 @@ def user_login(request):
             return redirect('home') #tu następuje przekierowanie usera po zalogowaniu
         else:
             messages.error(request, 'Nieprawidłowa nazwa użytkownika lub hasło.')
-    return render(request, 'login.html')
+    return render(request, 'registration/login.html')
