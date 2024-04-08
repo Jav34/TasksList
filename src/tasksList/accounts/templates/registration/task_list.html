@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista zadań</title>
+</head>
+<body>
+    <h1>Lista zadań</h1>
+    <ul>
+        {% for task in tasks %}
+        <li>{{ task.name }}</li>
+        <li>{{ task.description }}</li>
+        <li>{{ task.due_date }}</li>
+        <li>{{ task.priority }}</li>
+        <li>{{ task.assigned_to }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

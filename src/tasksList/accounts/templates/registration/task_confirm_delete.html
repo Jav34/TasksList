@@ -1,0 +1,17 @@
+<!-- task_confirm_delete.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potwierdzenie usuwania</title>
+</head>
+<body>
+    <h1>Potwierdź usunięcie</h1>
+    <p>Czy na pewno chcesz usunąć to zadanie?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Potwierdź</button>
+    </form>
+</body>
+</html>

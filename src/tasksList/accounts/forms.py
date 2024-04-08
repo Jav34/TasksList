@@ -1,6 +1,8 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext_lazy as _
 from .models import CustomUser
+from django import forms
+from .models import Task, Project
 
 class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
@@ -23,3 +25,11 @@ class CustomUserCreationForm(UserCreationForm):
             'max_length': _("Nazwa użytkownika może zawierać maksymalnie 150 znaków.")
         }
 
+class TaskForm(forms.ModelForm):
+    class Meta:
+        model = Task
+        fields = ['name', 'description', 'due_date', 'priority', 'assigned_to']
+
+class ProjectForm(forms.ModelForm):
+    model = Project
+    fields = ['name', 'description', 'start_date', 'end_date']
